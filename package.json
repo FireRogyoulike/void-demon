@@ -1,0 +1,19 @@
+{
+  "name": "void-demon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FireRogyoulike/void-demon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FireRogyoulike/void-demon/issues"
+  },
+  "homepage": "https://github.com/FireRogyoulike/void-demon#readme"
+}

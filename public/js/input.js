@@ -1,7 +1,5 @@
-
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', () => {
     const textElement = document.getElementById('text');
-    //const cursorElement = document.getElementById('cursor');
     let text = '';
     const maxLength = 15; // Максимальная длина текста
 
@@ -26,3 +24,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Обработчик события keydown на весь документ
     document.addEventListener('keydown', handleKeyPress);
 });
+

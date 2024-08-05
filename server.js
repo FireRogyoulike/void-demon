@@ -1,23 +1,24 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const path = require('path');
-const app = express();
-const PORT = process.env.PORT || 3000;
 
-// Middleware для обработки статических файлов
+const app = express();
+const port = 3000;
+
+const wordList = ['word1', 'word2', 'word3'];
+
+app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-function wordCheck(req, res) {
-
-}
-
-// Маршрутор API
-app.get('/api/hello', (req, res) => {
-    res.json({ message: 'Hello from server!' });
+app.post('/check-word', (req, res) => {
+    const word = req.body.word;
+    if (wordList.includes(word)) {
+        res.json({ result: 'kind' });
+    } else {
+        res.json({ result: 'angry' });
+    }
 });
 
-
-// Запуск сервера
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
 });

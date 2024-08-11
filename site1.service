@@ -6,7 +6,7 @@ StartLimitIntervalSec=3
 [Service]
 Restart=always
 RestartSec=3
-User=nginx
+User=root
 WorkingDirectory=/var/www/void-demon
 ExecStart=/usr/bin/node /var/www/void-demon/server.js
 KillSignal=SIGINT

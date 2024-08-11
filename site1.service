@@ -1,0 +1,16 @@
+[Unit]
+Description=Site 1
+After=network.target
+StartLimitIntervalSec=3
+
+[Service]
+Restart=always
+RestartSec=3
+User=nginx
+WorkingDirectory=/var/www/void-demon
+ExecStart=/usr/bin/node /var/www/void-demon/server.js
+KillSignal=SIGINT
+TimeoutStopSec=90
+
+[Install]
+WantedBy=multi-user.target

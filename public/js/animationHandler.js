@@ -1,10 +1,11 @@
 import { frameCounts, frameDelay, startAnimation } from './animationUtils.js';
+import { clearText } from './input.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const inputElement = document.getElementById('text');
     const imgElement = document.getElementById('voidDemon');
 
-    inputElement.addEventListener('keydown', (event) => {
+    window.addEventListener('keydown', (event) => {
         if (event.key === 'Enter') {
             const word = inputElement.textContent;
             checkWord(word);
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     startAnimation('angry', imgElement);
                 }
+                clearText()
             });
     }
 });

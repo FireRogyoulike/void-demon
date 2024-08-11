@@ -5,7 +5,7 @@ let animationInterval;
 
 export function updateFrame(animationType, imgElement) {
     const frameCount = frameCounts[animationType];
-    let framePath = `assets/maw_${animationType}_${currentFrame}.png`;
+    let framePath = `assets/${animationType}/maw_${animationType}_${currentFrame}.png`;
     imgElement.src = framePath;
     currentFrame++;
 

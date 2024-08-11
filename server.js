@@ -5,7 +5,7 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
-const wordList = ['word1', 'word2', 'word3'];
+const wordList = ['soymilk', 'a', 'word3'];
 
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));

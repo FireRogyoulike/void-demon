@@ -1,6 +1,7 @@
+let text = '';
+
 document.addEventListener('DOMContentLoaded', () => {
     const textElement = document.getElementById('text');
-    let text = '';
     const maxLength = 15; // Максимальная длина текста
 
     function handleKeyPress(event) {
@@ -24,4 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Обработчик события keydown на весь документ
     document.addEventListener('keydown', handleKeyPress);
 });
+
+export function clearText() {
+    const textElement = document.getElementById('text');
+    text = '';
+    textElement.textContent = text;
+}
 
